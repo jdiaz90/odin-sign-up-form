@@ -1,5 +1,7 @@
 :root{
     box-sizing: border-box;
+    --left-space: 5%;
+    --bg-top-bot: rgb(240, 240, 240)
 }
 
 @font-face {
@@ -38,17 +40,17 @@ section{
     flex-grow: 3.5;
 }
 
-section .head{
-    background-color: lightgray;
+section .head, section .footer{
+    background-color: var(--bg-top-bot);
 }
 
 section .head{
-    padding-bottom: 5%;
+    padding-bottom: var(--left-space);
 }
 
 section .head, section .body > p{
     font-size: 2rem;
-    padding-left: 5%;
+    padding-left: var(--left-space);
     padding-right: 20%;
 }
 
@@ -56,10 +58,11 @@ section .body{
     display:flex;
     flex-direction: column;
     gap: 2rem;
+    padding-bottom: 5%;
 }
 
 section .row{
-    padding-left: 5%;
+    padding-left: var(--left-space);
     display:flex;
     gap: 3%;
 }
@@ -68,4 +71,25 @@ section .row .col{
     display:flex;
     flex-direction: column;
     gap: 0px;
+}
+
+section .row .col label{
+    font-size: 0.7rem;
+}
+
+section .row .col input{
+    border-color: #E5E7EB;
+}
+
+section .footer{
+    box-shadow: 0px -4px lightgray;
+    padding: var(--left-space)
+}
+
+section .footer button{
+    background-color: #596D48;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 50px;
 }
