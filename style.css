@@ -33,5 +33,39 @@ aside > .logo > img {
 }
 
 section{
+    display: flex;
+    flex-direction: column;
     flex-grow: 3.5;
+}
+
+section .head{
+    background-color: lightgray;
+}
+
+section .head{
+    padding-bottom: 5%;
+}
+
+section .head, section .body > p{
+    font-size: 2rem;
+    padding-left: 5%;
+    padding-right: 20%;
+}
+
+section .body{
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section .row{
+    padding-left: 5%;
+    display:flex;
+    gap: 3%;
+}
+
+section .row .col{
+    display:flex;
+    flex-direction: column;
+    gap: 0px;
 }
