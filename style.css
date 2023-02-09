@@ -1,7 +1,8 @@
 :root{
     box-sizing: border-box;
     --left-space: 5%;
-    --bg-top-bot: rgb(240, 240, 240)
+    --bg-top-bot: rgb(240, 240, 240);
+    --little-letter: 0.8rem;
 }
 
 @font-face {
@@ -75,7 +76,7 @@ section .row .col{
 }
 
 section .row .col label{
-    font-size: 0.7rem;
+    font-size: var(--little-letter);
 }
 
 section .row .col input{
@@ -91,6 +92,10 @@ section .row .col input:focus{
     
 }
 
+p#passwordAlert{
+    font-size: var(--little-letter);
+}
+
 section .footer{
     box-shadow: 0px -4px lightgray;
     padding: var(--left-space);
@@ -103,4 +108,12 @@ section .footer button{
     color: white;
     font-weight: bold;
     padding: 15px 50px;
+}
+
+p.error{
+    color: red;
+}
+
+p.success{
+    color: green;
 }
