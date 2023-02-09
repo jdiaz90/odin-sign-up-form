@@ -2,41 +2,51 @@ const inputPassword = document.querySelector('#password')
 const inputConfirmPassword = document.querySelector('#confirmPassword')
 const passwordAlert = document.querySelector('#passwordAlert')
 
+inputPassword.addEventListener('input',() => checkIfPasswordsMatch())
+inputConfirmPassword.addEventListener('input',() => checkIfPasswordsMatch())
 
-inputPassword.addEventListener('input',() => checkIfPasswordMatch())
-
-inputConfirmPassword.addEventListener('input',() => checkIfPasswordMatch())
-
-function checkIfPasswordMatch(){
+function checkIfPasswordsMatch(){
 
     if(inputPassword.value != '' && inputConfirmPassword.value != ''){
 
-        if(inputPassword.value === inputConfirmPassword.value){
-
-            passwordAlert.classList.add('success')
-            passwordAlert.classList.remove('error')
-            inputPassword.classList.remove('error')
-            inputConfirmPassword.classList.remove('error')
-            passwordAlert.textContent = '*Passwords match!'
-
-        } else {
-
-            passwordAlert.classList.add('error')
-            passwordAlert.classList.remove('success')
-            inputPassword.classList.add('error')
-            inputConfirmPassword.classList.add('error')
-            passwordAlert.textContent = '*Passwords do not match'
-
-        }
+        inputPassword.value === inputConfirmPassword.value 
+            ? passwordsMatch()
+            : passwordsNotMatch()
 
     } else {
 
-        passwordAlert.classList.remove('success')
-        passwordAlert.classList.remove('error')
-        inputPassword.classList.remove('error')
-        inputConfirmPassword.classList.remove('error')
-        passwordAlert.textContent = null
+        removeAllPasswordStyles()
 
     }
+
+}
+
+function passwordsMatch(){
+
+    passwordAlert.classList.add('success')
+    passwordAlert.classList.remove('error')
+    inputPassword.classList.remove('error')
+    inputConfirmPassword.classList.remove('error')
+    passwordAlert.textContent = '*Passwords match!'
+
+}
+
+function passwordsNotMatch(){
+
+    passwordAlert.classList.add('error')
+    passwordAlert.classList.remove('success')
+    inputPassword.classList.add('error')
+    inputConfirmPassword.classList.add('error')
+    passwordAlert.textContent = '*Passwords do not match'
+
+}
+
+function removeAllPasswordStyles(){
+
+    passwordAlert.classList.remove('success')
+    passwordAlert.classList.remove('error')
+    inputPassword.classList.remove('error')
+    inputConfirmPassword.classList.remove('error')
+    passwordAlert.textContent = null
 
 }
