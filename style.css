@@ -10,7 +10,8 @@
 }
 
 body{
-    display:flex
+    display:flex;
+    margin: 0px;
 }
 
 aside{
@@ -79,11 +80,21 @@ section .row .col label{
 
 section .row .col input{
     border-color: #E5E7EB;
+    border-radius: 5px;
+    height: 1.2rem;
+}
+
+section .row .col input:focus{
+    outline: none;
+    border-color: skyblue;
+    box-shadow: inset 1px 1px skyblue;
+    
 }
 
 section .footer{
     box-shadow: 0px -4px lightgray;
-    padding: var(--left-space)
+    padding: var(--left-space);
+    padding-bottom: 10%;
 }
 
 section .footer button{
