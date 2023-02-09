@@ -16,6 +16,7 @@ body{
 }
 
 aside{
+    position:relative;
     background-color: black;
     background-image: url('./images/bg.avif');
     color: white;
@@ -34,6 +35,17 @@ aside > .logo{
 
 aside > .logo > img{
     height: 10rem;
+}
+
+aside .footer{
+    position: absolute;
+    bottom: 0px;
+    font-size: var(--little-letter);
+    left: 22%;
+}
+
+aside .footer a{
+    color: white;
 }
 
 section{
