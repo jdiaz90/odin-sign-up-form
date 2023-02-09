@@ -123,3 +123,9 @@ p.error{
 p.success{
     color: green;
 }
+
+@media (max-width: 800px) {
+    aside{
+        display: none;
+    }
+}
