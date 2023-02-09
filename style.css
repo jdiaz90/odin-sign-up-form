@@ -3,6 +3,7 @@
     --left-space: 5%;
     --bg-top-bot: rgb(240, 240, 240);
     --little-letter: 0.8rem;
+    --button-color: #596D48;
 }
 
 @font-face {
@@ -121,11 +122,15 @@ section .footer{
 }
 
 section .footer button{
-    background-color: #596D48;
+    background-color: var(--button-color);
     border-radius: 5px;
     color: white;
     font-weight: bold;
     padding: 15px 50px;
+}
+
+section .footer p a{
+    color: var(--button-color);
 }
 
 p.error{
