@@ -1,0 +1,37 @@
+:root{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('./fonts/Norse-Bold.otf');
+}
+
+body{
+    display:flex
+}
+
+aside{
+    background-color: black;
+    background-image: url('./images/bg.avif');
+    color: white;
+    flex-grow: 1;
+}
+
+aside > .logo {
+    display: flex;
+    align-items: center;
+    background-color: #00000080;
+    font-family: 'Norse-Bold', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8rem;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+aside > .logo > img {
+    height: 10rem;
+}
+
+section{
+    flex-grow: 3.5;
+}
