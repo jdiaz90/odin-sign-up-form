@@ -15,12 +15,16 @@ function checkIfPasswordMatch(){
 
             passwordAlert.classList.add('success')
             passwordAlert.classList.remove('error')
+            inputPassword.classList.remove('error')
+            inputConfirmPassword.classList.remove('error')
             passwordAlert.textContent = '*Passwords match!'
 
         } else {
 
             passwordAlert.classList.add('error')
             passwordAlert.classList.remove('success')
+            inputPassword.classList.add('error')
+            inputConfirmPassword.classList.add('error')
             passwordAlert.textContent = '*Passwords do not match'
 
         }
@@ -29,6 +33,8 @@ function checkIfPasswordMatch(){
 
         passwordAlert.classList.remove('success')
         passwordAlert.classList.remove('error')
+        inputPassword.classList.remove('error')
+        inputConfirmPassword.classList.remove('error')
         passwordAlert.textContent = null
 
     }

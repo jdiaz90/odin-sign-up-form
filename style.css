@@ -92,6 +92,12 @@ section .row .col input:focus{
     
 }
 
+section .row .col input.error{
+    border-color: red;
+    box-shadow: inset 1px 1px red;
+    
+}
+
 p#passwordAlert{
     font-size: var(--little-letter);
 }
