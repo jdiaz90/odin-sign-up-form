@@ -11,7 +11,7 @@
 }
 
 body{
-    display:flex;
+    display: flex;
     margin: 0px;
 }
 
@@ -22,7 +22,7 @@ aside{
     flex-grow: 1;
 }
 
-aside > .logo {
+aside > .logo{
     display: flex;
     align-items: center;
     background-color: #00000080;
@@ -32,7 +32,7 @@ aside > .logo {
     margin-top: 30%;
 }
 
-aside > .logo > img {
+aside > .logo > img{
     height: 10rem;
 }
 
@@ -80,13 +80,13 @@ section .row .col label{
 }
 
 section .row .col input{
+    outline: none;
     border-color: #E5E7EB;
     border-radius: 5px;
     height: 1.2rem;
 }
 
 section .row .col input:focus{
-    outline: none;
     border-color: skyblue;
     box-shadow: inset 1px 1px skyblue;
     
